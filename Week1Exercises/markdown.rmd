@@ -1,6 +1,7 @@
 ---
 title: "Week 1 Exercises"
-output: html_document
+author: "Jeroen Knoester"
+output: pdf_document
 ---
 # Exercise 1 - Variables
 a) Write an expression to compute the sum of the numbers 3 and 4
@@ -39,4 +40,7 @@ s <- "Alexander"
 h) Look for a function returning the length of a string and use it to determine the length of *s*
 ```{r}
 nchar(s)
-```
+```  
+\newpage
+# Exercise 2 - Vectors
+
