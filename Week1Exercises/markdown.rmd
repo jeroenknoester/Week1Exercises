@@ -1,0 +1,42 @@
+---
+title: "Week 1 Exercises"
+output: html_document
+---
+# Exercise 1 - Variables
+a) Write an expression to compute the sum of the numbers 3 and 4
+
+```{r}
+sum(3, 4)
+```
+b) Write an expression to determine if the product of 4 and 5 is equal to 21
+```{r}
+prod(4, 5) == 21
+```
+c) Create the variables *x*,*y*,*z* with values (respectively) 2, 3.5, 7
+```{r}
+x <- 2
+y <- 3.5
+z <- 7
+```
+d) Exploit a function of *R* to investigate the datatypeof the three variables *x*,*y*,*z*
+```{r}
+typeof(x)
+typeof(y)
+typeof(z)
+```
+e) Write an expression to compute the multiplication of the three variables *x*,*y*,*z*
+```{r}
+prod(x,y,z)
+```
+f) Write a Boolean expression (i.e., which result is T or F) which checks if the product of *x*,*y*,*z*  is equal to 49
+```{r}
+prod(x,y,z) == 49
+```
+g) Create a variable *s* with value "Alexander"
+```{r}
+s <- "Alexander"
+```
+h) Look for a function returning the length of a string and use it to determine the length of *s*
+```{r}
+nchar(s)
+```
