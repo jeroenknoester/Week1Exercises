@@ -43,4 +43,42 @@ nchar(s)
 ```  
 \newpage
 # Exercise 2 - Vectors
-
+a) Create a variable ?? (a vector) with the value 1: 10
+```{r}
+x <- 1:10
+```
+b) How can you investigate the length of ???
+```{r}
+length(x)
+```
+c) Multiply *x* by the number 1.2
+```{r}
+x <- x*1.2
+```
+d) Multiply the first five elements of *x* by 2
+```{r}
+x[1:5] <- x[1:5] * 5
+```
+e) Visualize *x* using *barplot(x)*
+```{r}
+barplot(x)
+```
+f) Assign to *x* the values of all integers from 0 to 10
+```{r}
+x <- 1:10
+```
+g) Create a graph of *x* against *x* using *plot(x,x,type = "b")*
+```{r}
+plot(x,x,type= "b")
+```
+h) Use *plot* to draw the graph of the function *y* = 3*x* + 2 for values of *x* between 0 and 10
+```{r}
+plot(3*x+2)
+```
+i) Use *plot* to draw the graph of the function *y* = *sin(x)* for values of *x* between 0 and 2 pi
+(use at least 200 points)
+```{r}
+points <- 1:200
+plot(sin(points / (2 * pi)))
+```
+j) 
