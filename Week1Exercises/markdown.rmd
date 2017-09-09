@@ -88,4 +88,30 @@ plot(sin(points / (2 * pi)), type="l", main="My First R graph")
 ```
 k) Find out how the function *"curve"* works and use it to plot the values of *cos(x)* between 0
 and 2 * pi```{r}curve(cos(x), from = 0, to=2*pi)```\newpage# Exercise 3 - Factors and dataframesa) Read the dataset "Ozone" (which you can download from N@tschool) into a variable called
-*"air"*
+*"air"*```{r}air <- read.csv("ozone.csv")```b) Which type of object is air?```{r}typeof(air)```c) Which are the names of the columns of air?```{r}names(air)```d) From how many lines is air composed?```{r}lengths(air)```e) In some cells, you see the value “NA”. What does this mean?```{r}help(NA)```f) Try to compute the average ozone level using the simple "mean" command and verify that
+the result of this operation is NA. Why does this happen?
+Some values of the set "air" are not available, therefore you can not calculate a *"mean"*
+
+g) Find out how to exclude NA values from the computation of the mean, and compute again
+the average of the ozone level (obtaining a number). 
+```{r}
+mean(air$Ozone, na.rm = TRUE)
+```
+h) Compute the mean temperature of the dataset. 
+```{r}
+mean(air$Temp)
+```
+i) How many observations of the dataset have a temperature strictly less than 67 and how
+many have one greater or equal than 67? NB: the sum of these two numbers should match
+the total lines number (as requested at step d).
+```{r}
+attach(air)
+lowtemperatures <- subset(Temp, Temp < 67)
+length(lowtemperatures)
+hightemperatures <- subset(Temp, Temp >= 67)
+length(hightemperatures)
+```
+j) Create the vector *"hot"* with logical values (T/F), where TRUE corresponds to temperatures
+strictly higher than 80 Fahrenheit. Use this vector to split the Ozone values in two: the ozone
+levels of warm days (i.e., when the temperature is greater than 80) and the ozone levels of
+cold days (i.e., when the temperature is lower or equal to 80).```{r}hot <- Temp > 80```k) Determine the mean ozone levels of warm days and cold days```{r}airFiltered <- na.omit(air)hotdays <- subset(airFiltered, airFiltered$Temp > 80)colddays <- subset(airFiltered, airFiltered$Temp <= 80)mean(hotdays$Ozone)mean(colddays$Ozone)```l) Produce a plot containing the two boxplots of ozone levels (warm days and cold days). ```{r}boxplot(hotdays$Ozone, colddays$Ozone)```
