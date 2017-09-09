@@ -79,6 +79,13 @@ i) Use *plot* to draw the graph of the function *y* = *sin(x)* for values of *x*
 (use at least 200 points)
 ```{r}
 points <- 1:200
-plot(sin(points / (2 * pi)))
+plot(sin(points / (2 * pi))) # this one is probably wrong
 ```
-j) 
+j) Find out how the graph can be made of only one line (without symbols) and give the graph a
+name (for example *"My First R graph"*)
+```{r}
+plot(sin(points / (2 * pi)), type="l", main="My First R graph")
+```
+k) Find out how the function *"curve"* works and use it to plot the values of *cos(x)* between 0
+and 2 * pi```{r}curve(cos(x), from = 0, to=2*pi)```\newpage# Exercise 3 - Factors and dataframesa) Read the dataset "Ozone" (which you can download from N@tschool) into a variable called
+*"air"*
